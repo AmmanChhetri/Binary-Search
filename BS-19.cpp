@@ -168,6 +168,9 @@ int binarySearch(vector<int> &bloomDay, int m, int k) {
 
     
     return ans;
+
+    // Time Complexity is O(log(max(bloomDay[])-min(bloomDay[])+1) * N)                 .... ...O(n) for checking if the 
+    // number is possible or not....
 }
 
 
