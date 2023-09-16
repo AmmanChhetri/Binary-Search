@@ -75,6 +75,7 @@ int linearSearch(vector<int> &nums, int k) {
     }
 
     return low;
+    // Time complexity is O(sum-max+1)*O(n)...
 }
 
 
@@ -101,6 +102,7 @@ int binarySearch(vector<int> &nums, int k) {
 
 
     return low;
+    // Time complexity is O(log(sum-max+1))*O(n)...
 
 }
 
