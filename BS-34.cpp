@@ -81,6 +81,19 @@ int median_Brute(vector<vector<int>> &matrix, int m, int n) {
 
 // now we are a particular element who has 5 as the count of  numbers lesser or equal to this number...than as wee >7 ...so we
 // need towards right...
+
+// ! why the case of counting numbers lesser than the actual number ...or in short... say find the first number who has 7 
+// ! numbers shorter than itself will fail...Consider example for n = 15 ...  1 2 3 5 5 5 6 8 9 ...so on ...say this element 9 
+// ! is our median...which means we have 7 elements to the left of 9 and 7 to the right of 9 ....so if we count the numbers 9 
+// ! is the first number having 7 numbers shorter than itself so it will be our answer...now if i modify the first half of the 
+// ! array like 1 2 3 5 5 6 9 9 10...now if we count the first element that has 7 elements lesser then itself ...we wont find 
+// ! any 9 has 6 elements lesser than itself..and 10 has 8 elements lesser than itself ...that's why counting in this way will
+// ! fail....so that's why while counting we need to include the numbers that are equal and lesser than itself ...and the
+// ! first number which has count > 7 ...will be our answer...why so...because...think....if including a particular number is
+// ! making a count < 7 or equal to 7 ...but the moment u go to next number the count has increased from 7 ...which means...
+// ! including this number ...you are taking more than half of the array space...which means this second number is your median..
+// ! Dry run with different examples like once...given in above lines. ...
+
 int upperBound(vector<int> &arr, int x, int n) {
 
     int low = 0;
